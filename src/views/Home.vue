@@ -1,18 +1,166 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div id="banner">
+      <swiper ref="mySwiper" :options="swiperOptions">
+        <swiper-slide><div class="slider1"></div></swiper-slide>
+        <swiper-slide><div class="slider2"></div></swiper-slide>
+        <swiper-slide><div class="slider3"></div></swiper-slide>
+        <swiper-slide><div class="slider4"></div></swiper-slide>
+        <div class="swiper-button-prev" slot="button-prev"></div>
+        <div class="swiper-button-next" slot="button-next"></div>
+        <div class="swiper-pagination" slot="pagination"></div>
+      </swiper>
+    </div>
+    <div id="style">
+      <h1>設計風格</h1>
+      <div class="style-content">
+        <div class="style-content-zh">
+          <p>皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡</p><br>
+          <p>皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡，皮卡皮卡皮卡皮卡，皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡。</p><br>
+        </div>
+        <div class="style-content-en">
+          <p>Pika pika pika pika pika pika pika pika pika pika pika pika </p><br>
+          <p>Pika pika pika pika pika pika pika pika pika pika pika pika, pika pika pika pika, pika pika pika pika pika pika pika pika pika pika pika pika pika.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    Swiper,
+    SwiperSlide
+  },
+  data () {
+    return {
+      swiperOptions: {
+        loop: true,
+        effect: 'fade',
+        spaceBetween: 30,
+        // autoplay: {
+        //   delay: 4000,
+        //   disableOnInteraction: false
+        // },
+        pagination: {
+          el: '.swiper-pagination',
+          dynamicBullets: true,
+          clickable: true
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }
+      }
+    }
+  },
+  computed: {
+    swiper () {
+      return this.$refs.mySwiper.$swiper
+    }
+  },
+  mounted () {
+    // this.swiper.slideTo(0, 2000, false)
   }
 }
 </script>
+
+<style lang="scss">
+.home {
+  // .swiper-container-horizontal {
+  //   > .swiper-scrollbar {
+  //     height: 30px;
+  //   }
+  // }
+  #banner {
+    .swiper-container,
+    .swiper-container-fade,
+    .swiper-container-initialized,
+    .swiper-container-horizontal {
+      width: 100%;
+      height: 500px;
+      .swiper-wrapper {
+        .swiper-slide,
+        .swiper-slide-duplicate,
+        .swiper-slide-prev {
+          .slider1{
+            width: 100%;
+            height: 100%;
+            background-image: url('../assets/01.jpg');
+            background-size: cover;
+            background-position: center;
+          }
+          .slider2{
+            width: 100%;
+            height: 100%;
+            background-image: url('../assets/02.jpg');
+            background-size: cover;
+            background-position: center;
+          }
+          .slider3{
+            width: 100%;
+            height: 100%;
+            background-image: url('../assets/03.jpg');
+            background-size: cover;
+            background-position: center;
+          }
+          .slider4{
+            width: 100%;
+            height: 100%;
+            background-image: url('../assets/04.jpg');
+            background-size: cover;
+            background-position: center;
+          }
+        }
+      }
+      .swiper-pagination {
+          .swiper-pagination-bullet {
+            height: 12px;
+            width: 12px;
+            background-color: white;
+          }
+        }
+        .swiper-button-prev {
+          color: white;
+          font-weight: bold;
+          border-color: white;
+        }
+        .swiper-button-next {
+          color: white;
+          font-weight: bold;
+        }
+    }
+  }
+  #style {
+    display: flex;
+    width: 100%;
+    flex-flow: column nowrap;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 40px;
+    h1 {
+      width: 100%;
+      margin-bottom: 50px;
+      text-align: center;
+      font-size: 25px;
+      font-weight: bold;
+    }
+    .style-content {
+      display: flex;
+      flex-flow: column nowrap;
+      width: 100%;
+      .style-content-zh {
+        margin-bottom: 50px;
+      }
+      .style-content-en {
+
+      }
+    }
+  }
+}
+</style>
