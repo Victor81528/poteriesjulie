@@ -1,12 +1,18 @@
 <template>
   <div id="app">
-    <nav>
-      <div class="nav-logo">
-        <router-link to="/"><p>Julie</p></router-link>
+    <nav :class="{'nav-open': isOpen}">
+      <div class="nav-logo-burger">
+        <div class="nav-logo">
+          <router-link to="/"><p>Julie</p></router-link>
+        </div>
+        <a href="" class="nav-burger">
+          <i class="fas fa-bars" @click.prevent="openMenu"></i>
+          <i class="fas fa-times" @click.prevent="closeMenu"></i>
+        </a>
       </div>
       <div class="nav-link">
-        <router-link to="/about">所有商品</router-link>｜
-        <router-link to="/about">設計主張</router-link>｜
+        <router-link to="/about">所有商品</router-link>
+        <router-link to="/about">設計主張</router-link>
         <router-link to="/about">關於陶土</router-link>
       </div>
     </nav>
@@ -22,7 +28,7 @@
         </div>
       </div>
       <div class="copyright">
-        <p>Copyright © 2021 Julie.</p>
+        <p>Copyright © 2021 Alishan.</p>
       </div>
     </footer>
   </div>
@@ -32,6 +38,19 @@
 import '@/scss/_reset.css'
 
 export default {
+  data () {
+    return {
+      isOpen: false
+    }
+  },
+  methods: {
+    openMenu () {
+      this.isOpen = true
+    },
+    closeMenu () {
+      this.isOpen = false
+    }
+  }
 }
 </script>
 
@@ -45,26 +64,101 @@ export default {
   color: #2c3e50;
   nav {
     display: flex;
-    position: fixed;
+    position: absolute;
     width: 100%;
-    flex-flow: nowrap row;
+    height: 70px;
+    flex-flow: row nowrap;
     justify-content: space-between;
-    align-items: center;
     box-sizing: border-box;
-    z-index: 10;
     padding: 20px;
-    .nav-logo{
-      a {
-      font-weight: bold;
-      font-size: 30px;
-      color: #ffffff;
+    z-index: 5;
+    transition: ease-in-out 0.6s;
+    .nav-logo-burger {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      @media screen and (max-width: 768px){
+        width: 100%;
+      }
+      .nav-logo {
+        a {
+          font-weight: bold;
+          font-size: 30px;
+          color: #f5f5f7;
+          :hover {
+            color: #ffffff;
+          }
+        }
+      }
+      .nav-burger {
+        display: none;
+        @media screen and (max-width: 768px) {
+          display: block;
+        }
+        .fa-bars {
+          font-size: 25px;
+          color: #f5f5f7;
+          :hover {
+            color: #ffffff;
+          }
+        }
+        .fa-times {
+          display: none;
+          @media screen and (max-width: 768px) {
+            color: #f5f5f7;
+            font-size: 25px;
+          }
+        }
       }
     }
     .nav-link {
-      color: #ffffff;
+      display: flex;
+      flex-flow: row nowrap;
+      color: #f5f5f7;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
       a {
+        text-align: center;
+        line-height: 35px;
+        margin-left: 20px;
         font-weight: bold;
-        color: #ffffff;
+        color: #f5f5f7;
+      }
+    }
+    &.nav-open {
+      display: flex;
+      flex-flow: column nowrap;
+      height: 100vh;
+      width: 100%;
+      justify-content: flex-start;
+      background-color: rgba(0, 0, 0, 0.85);
+      .nav-logo-burger {
+        padding-bottom: 20px;
+        border-bottom: solid 1px #f5f5f7;
+        box-sizing: border-box;
+        .nav-logo {
+        }
+        .nav-burger {
+          .fa-bars {
+            display: none;
+          }
+          .fa-times {
+            display: block;
+          }
+        }
+      }
+      .nav-link {
+        display: flex;
+        width: 100%;
+        flex-flow: column nowrap;
+        align-items: flex-end;
+        box-sizing: border-box;
+        padding: 20px 30px;
+        a {
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
       }
     }
   }

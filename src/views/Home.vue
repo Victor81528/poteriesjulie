@@ -72,11 +72,8 @@ export default {
 
 <style lang="scss">
 .home {
-  // .swiper-container-horizontal {
-  //   > .swiper-scrollbar {
-  //     height: 30px;
-  //   }
-  // }
+  display: block;
+  z-index: 10;
   #banner {
     .swiper-container,
     .swiper-container-fade,
@@ -119,21 +116,18 @@ export default {
         }
       }
       .swiper-pagination {
-          .swiper-pagination-bullet {
-            height: 12px;
-            width: 12px;
-            background-color: white;
-          }
+        .swiper-pagination-bullet {
+          height: 10px;
+          width: 10px;
+          background-color: white;
         }
-        .swiper-button-prev {
-          color: white;
-          font-weight: bold;
-          border-color: white;
-        }
-        .swiper-button-next {
-          color: white;
-          font-weight: bold;
-        }
+      }
+      .swiper-button-prev {
+        color: white;
+      }
+      .swiper-button-next {
+        color: white;
+      }
     }
   }
   #style {
