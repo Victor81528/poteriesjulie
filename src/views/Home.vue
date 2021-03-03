@@ -6,8 +6,6 @@
         <swiper-slide><div class="slider2"></div></swiper-slide>
         <swiper-slide><div class="slider3"></div></swiper-slide>
         <swiper-slide><div class="slider4"></div></swiper-slide>
-        <div class="swiper-button-prev" slot="button-prev"></div>
-        <div class="swiper-button-next" slot="button-next"></div>
         <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
     </div>
@@ -51,10 +49,6 @@ export default {
           el: '.swiper-pagination',
           dynamicBullets: true,
           clickable: true
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
         }
       }
     }
@@ -66,6 +60,7 @@ export default {
   },
   mounted () {
     // this.swiper.slideTo(0, 2000, false)
+    this.$store.commit('changeColor', '#f5f5f7')
   }
 }
 </script>
@@ -121,12 +116,6 @@ export default {
           width: 10px;
           background-color: white;
         }
-      }
-      .swiper-button-prev {
-        color: white;
-      }
-      .swiper-button-next {
-        color: white;
       }
     }
   }

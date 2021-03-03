@@ -141,7 +141,7 @@ a:visited,
 a:active,
 a:hover {
     outline: 0;
-    color: black;
+    color: currentColor;
     text-decoration: none;
 }
 
