@@ -29,14 +29,21 @@ export default {
     width: 100%;
     height: 150px;
     flex-flow: column nowrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     background-color: #e5e5e5;
     box-sizing: border-box;
+    padding: 20px;
+    @media screen and (max-width: 768px) {
+      padding: 15px;
+    }
+    @media screen and (max-width: 414px) {
+      padding: 10px;
+    }
     .footer-info {
       display: flex;
       flex-flow: column nowrap;
       justify-content: flex-start;
-      padding: 20px;
+      box-sizing: border-box;
       .fallow {
         h1 {
           text-align: left;

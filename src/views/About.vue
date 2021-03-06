@@ -1,10 +1,4 @@
 <template>
-<<<<<<< Updated upstream
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
-</template>
-=======
   <div id="about">
     <div class="design">
       <p>This is an about page</p>
@@ -14,6 +8,10 @@
 
 <script>
 export default {
+  data () {
+    return {
+    }
+  },
   mounted () {
     this.$store.commit('changeColor', '#2c3e50')
   }
@@ -35,4 +33,3 @@ export default {
     }
   }
 </style>
->>>>>>> Stashed changes

@@ -59,11 +59,14 @@ export default {
     transition: ease-in-out 0.6s;
     user-select: none;
     color: #f5f5f7;
+    @media screen and (max-width: 414px) {
+      padding: 10px;
+    }
     .nav-logo-burger {
       display: flex;
       flex-flow: row nowrap;
       justify-content: space-between;
-      @media screen and (max-width: 768px){
+      @media screen and (max-width: 768px) {
         width: 100%;
       }
       .nav-logo {
@@ -74,6 +77,7 @@ export default {
       }
       .nav-burger {
         display: none;
+        font-size: 25px;
         @media screen and (max-width: 768px) {
           display: block;
         }
@@ -82,9 +86,6 @@ export default {
         }
         .fa-times {
           display: none;
-          @media screen and (max-width: 768px) {
-            font-size: 25px;
-          }
         }
       }
     }
@@ -141,6 +142,9 @@ export default {
           align-items: flex-end;
           box-sizing: border-box;
           padding: 20px 30px;
+          @media screen and (max-width: 414px) {
+            padding: 20px 15px;
+          }
           a {
             width: 100%;
             font-size: 18px;
@@ -152,7 +156,12 @@ export default {
           }
         }
       }
-      @media screen and (max-width: 512px) {
+      @media screen and (max-width: 414px) {
+        padding: 10px;
+        .nav-logo-burger {
+          padding: 0 0 10px;
+        }
       }
     }
-  }</style>
+  }
+  </style>

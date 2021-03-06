@@ -41,10 +41,10 @@ export default {
         loop: true,
         effect: 'fade',
         spaceBetween: 30,
-        // autoplay: {
-        //   delay: 4000,
-        //   disableOnInteraction: false
-        // },
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false
+        },
         pagination: {
           el: '.swiper-pagination',
           dynamicBullets: true,
@@ -126,12 +126,18 @@ export default {
     background-color: white;
     box-sizing: border-box;
     padding: 40px;
+    @media screen and (max-width: 414px) {
+      padding: 20px;
+    }
     h1 {
       width: 100%;
       margin-bottom: 50px;
       text-align: center;
       font-size: 25px;
       font-weight: bold;
+      @media screen and (max-width: 414px) {
+        margin-bottom: 30px;
+      }
     }
     .style-content {
       display: flex;
@@ -139,9 +145,11 @@ export default {
       width: 100%;
       .style-content-zh {
         margin-bottom: 50px;
+        @media screen and (max-width: 414px) {
+          margin-bottom: 25px;
+        }
       }
       .style-content-en {
-
       }
     }
   }
