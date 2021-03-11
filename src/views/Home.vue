@@ -75,7 +75,7 @@ export default {
     .swiper-container-initialized,
     .swiper-container-horizontal {
       width: 100%;
-      height: 500px;
+      height: 100vh;
       .swiper-wrapper {
         .swiper-slide,
         .swiper-slide-duplicate,
