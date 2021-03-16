@@ -9,7 +9,7 @@
 <script>
 import '@/scss/_reset.css'
 import Nav from './views/Nav.vue'
-import Footer from './views/Footer.vue'sdfg
+import Footer from './views/Footer.vue'
 
 export default {
   components: {
