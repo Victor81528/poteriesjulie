@@ -4,9 +4,9 @@
       <div class="nav-logo">
         <router-link to="/" @click.native="closeMenu"><p>Julie</p></router-link>
       </div>
-      <a href="" class="nav-burger">
+      <a href="#" class="nav-burger">
         <i class="fas fa-bars" @click.prevent="openMenu"></i>
-        <i class="fas fa-times" @click.prevent="closeMenu"></i>
+        <i class="fas fa-times"  @click.prevent="closeMenu"></i>
       </a>
     </div>
     <div class="nav-link">
@@ -34,6 +34,7 @@ export default {
     },
     closeMenu () {
       this.$store.commit('changeNavShow', false)
+      window.scrollTo(0, 0)
     }
   },
   computed: {
@@ -111,7 +112,8 @@ export default {
         // height: 250px;
         height: 100%;
         justify-content: flex-start;
-        background-color: rgba(0, 0, 0, 0.85);
+        // background-color: rgba(0, 0, 0, 0.85);
+        background-color: rgb(23, 23, 23);
         transition: ease-in-out 0.6s;
         color: #f5f5f7 !important;
         .nav-logo-burger {
