@@ -30,6 +30,7 @@ export default {
     height: 150px;
     flex-flow: column nowrap;
     justify-content: space-between;
+    align-self: center;
     background-color: #e5e5e5;
     box-sizing: border-box;
     padding: 20px;
@@ -64,7 +65,7 @@ export default {
         }
       }
     }
-    .footer-copyright {
+    .copyright {
       text-align: center;
     }
   }

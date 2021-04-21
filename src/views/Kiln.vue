@@ -1,10 +1,12 @@
 <template>
   <div id="kiln">
     <div class="design">
-      <video id="bg-video" muted autoplay loop>
-        <source src="../assets/01.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+      <div class="box">
+        <video id="bg-video" muted autoplay loop>
+          <source src="../assets/01.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
   </div>
 </template>
@@ -22,12 +24,16 @@ export default {
 </script>
 
 <style lang="scss">
+  .box {
+    // filter: blur(4px) sepia(30%);
+    filter: saturate(50%);
+  }
   #bg-video {
     width: 100vw;
     height: 100vh;
     box-sizing: border-box;
     object-fit: cover;
-    filter: blur(4px);
+    // filter: blur(4px);
   }
   #kiln {
     display: flex;

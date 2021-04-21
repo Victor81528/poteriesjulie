@@ -112,8 +112,8 @@ export default {
       }
       .swiper-pagination {
         .swiper-pagination-bullet {
-          height: 10px;
-          width: 10px;
+          height: 12px;
+          width: 12px;
           background-color: white;
         }
       }
