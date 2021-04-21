@@ -1,4 +1,4 @@
-<template>測試啦
+<template>
   <nav :class="{'nav-open': navShow.isOpen}" :style="{color: navTextColor.color}" @touchmove.prevent>
     <div class="nav-logo-burger">
       <div class="nav-logo">
