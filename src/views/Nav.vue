@@ -12,7 +12,7 @@
     <div class="nav-link">
       <router-link to="/about" @click.native="closeMenu">所有商品</router-link>
       <router-link to="/about" @click.native="closeMenu">設計主張</router-link>
-      <router-link to="/about" @click.native="closeMenu">關於陶土</router-link>
+      <router-link to="/kiln" @click.native="closeMenu">關於柴燒</router-link>
     </div>
   </nav>
 </template>
@@ -109,7 +109,6 @@ export default {
         position: fixed;
         flex-flow: column nowrap;
         width: 100%;
-        // height: 250px;
         height: 100%;
         justify-content: flex-start;
         // background-color: rgba(0, 0, 0, 0.85);

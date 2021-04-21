@@ -18,14 +18,13 @@ export default {
   }
 }
 </script>
-
+@fontface
 <style lang="scss">
+  @font-face {
+  font-family: NotoSansTC;
+  src: url('/fonts/NotoSansTC-thin.otf');
+  }
   #app {
-    width: 100vw;
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
+    font-family: NotoSansTC;
   }
 </style>
