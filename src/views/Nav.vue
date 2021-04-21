@@ -10,7 +10,7 @@
       </a>
     </div>
     <div class="nav-link">
-      <router-link to="/about" @click.native="closeMenu">所有商品</router-link>
+      <router-link to="/about" @click.native="closeMenu">作者介紹</router-link>
       <router-link to="/about" @click.native="closeMenu">設計主張</router-link>
       <router-link to="/kiln" @click.native="closeMenu">關於柴燒</router-link>
     </div>
