@@ -10,13 +10,13 @@
       </swiper>
     </div>
     <div id="style">
-      <h1>設計風格</h1>
+      <h1 data-aos="fadeIn" data-aos-offset="100">設計風格</h1>
       <div class="style-content">
-        <div class="style-content-zh">
+        <div class="style-content-zh" data-aos="fade-left">
           <p>皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡</p><br>
           <p>皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡，皮卡皮卡皮卡皮卡，皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡。</p><br>
         </div>
-        <div class="style-content-en">
+        <div class="style-content-en"  data-aos="fade-right">
           <p>Pika pika pika pika pika pika pika pika pika pika pika pika </p><br>
           <p>Pika pika pika pika pika pika pika pika pika pika pika pika, pika pika pika pika, pika pika pika pika pika pika pika pika pika pika pika pika pika.</p>
         </div>

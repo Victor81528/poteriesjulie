@@ -8,6 +8,8 @@
         </video>
       </div>
     </div>
+    <div class="description">
+    </div>
   </div>
 </template>
 
@@ -31,7 +33,7 @@ export default {
   #bg-video {
     width: 100vw;
     height: 100vh;
-    box-sizing: border-box;
+    box-sizing: pa;
     object-fit: cover;
     // filter: blur(4px);
   }
