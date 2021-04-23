@@ -1,7 +1,12 @@
 <template>
   <div id="about">
-    <div class="design">
-      <p>This is an about page</p>
+    <div class="introduction">
+      <img src="../assets/julie.jpg" alt="Julie">
+      <div class="paragraph">
+        <p>傑尼傑尼傑尼傑尼傑尼傑尼傑尼傑尼傑尼傑尼傑尼傑尼傑尼傑尼傑尼傑尼傑尼傑尼傑尼傑尼傑尼傑尼傑尼傑尼傑尼傑尼傑尼傑尼傑尼傑尼</p>
+        <p>傑尼傑尼傑尼傑尼傑尼傑尼</p>
+        <p>傑尼傑尼傑尼傑尼傑尼傑尼傑尼傑尼傑尼傑尼傑尼傑尼</p>
+      </div>
     </div>
   </div>
 </template>
@@ -19,17 +24,23 @@ export default {
 </script>
 
 <style lang="scss">
-  #about {
+#about {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 100px 30px ;
+  background-color: white;
+  .introduction {
     display: flex;
-    flex-flow: column nowrap;
-    box-sizing: border-box;
-    padding: 100px 30px ;
-    background-color: white;
-    .design {
-      display: flex;
-      width: 100%;
-      height: 500px;
-      background-color: yellow;
+    width: 100%;
+    height: 80vh;
+    flex-flow: nowrap row;
+    img {
+      width: 50%;
+      object-fit: cover;
+      object-position: -120px;
     }
   }
+}
 </style>
