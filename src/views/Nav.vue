@@ -2,7 +2,7 @@
   <nav :class="{'nav-open': navShow.isOpen}" :style="{color: navTextColor.color}" @touchmove.prevent>
     <div class="nav-logo-burger">
       <div class="nav-logo">
-        <router-link to="/" @click.native="closeMenu"><p>Julie</p></router-link>
+        <router-link to="/" @click.native="closeMenu"><h1>Artimiste</h1></router-link>
       </div>
       <a href="#" class="nav-burger">
         <i class="fas fa-bars" @click.prevent="openMenu"></i>

@@ -4,13 +4,13 @@
       <div class="fallow">
         <h1>關注我們</h1>
         <div class="footer-link">
-          <a href="https://www.facebook.com/victor81528" target="blank"><i class="fab fa-facebook-square"></i></a>
-          <a href="https://www.instagram.com/victor.hong/" target="blank"><i class="fab fa-instagram"></i></a>
+          <a href="" target="blank"><i class="fab fa-facebook-square"></i></a>
+          <a href="" target="blank"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
     </div>
     <div class="copyright">
-      <p>Copyright © 2021 Alishan.</p>
+      <p>Copyright © 2021 Artimiste.</p>
     </div>
   </footer>
 </template>
