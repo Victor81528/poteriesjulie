@@ -10,9 +10,9 @@
       </swiper>
     </div>
     <div id="style">
-      <h1 data-aos="fadeIn" data-aos-offset="100">設計風格</h1>
+      <h1 data-aos="fadeIn" data-aos-offset="200">設計風格</h1>
       <div class="style-content">
-        <div class="style-content-zh" data-aos="fade-left">
+        <div class="style-content-zh" data-aos="fade-left" data-aos-offset="80">
           <p>皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡</p><br>
           <p>皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡，皮卡皮卡皮卡皮卡，皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡皮卡。</p><br>
         </div>
@@ -74,7 +74,7 @@ export default {
     .swiper-container-fade,
     .swiper-container-initialized,
     .swiper-container-horizontal {
-      width: 100%;
+      width: 100vw;
       height: 100vh;
       .swiper-wrapper {
         .swiper-slide,

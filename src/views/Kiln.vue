@@ -2,13 +2,12 @@
   <div id="kiln">
     <div class="design">
       <div class="box">
-        <video id="bg-video" muted autoplay loop>
-          <source src="../assets/01.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
       </div>
     </div>
     <div class="description">
+      <video-background src="01.mp4" style="height: 100vh; height: 100vh;">
+        <!-- 01.mp4實際路徑是在/public -->
+      </video-background>
     </div>
   </div>
 </template>
@@ -26,28 +25,20 @@ export default {
 </script>
 
 <style lang="scss">
-  .box {
-    // filter: blur(4px) sepia(30%);
-    filter: saturate(50%);
+#kiln {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  .design {
+    display: flex;
+    width: 100%;
   }
-  #bg-video {
+  .description {
     width: 100vw;
     height: 100vh;
-    box-sizing: pa;
-    object-fit: cover;
-    // filter: blur(4px);
+    filter: saturate(50%);
   }
-  #kiln {
-    display: flex;
-    flex-flow: column nowrap;
-    width: 100%;
-    height: 100vh;
-    box-sizing: border-box;
-    background-color: white;
-    .design {
-      display: flex;
-      width: 100%;
-      height: 500px;
-    }
-  }
+}
 </style>
