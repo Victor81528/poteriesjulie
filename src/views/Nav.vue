@@ -60,7 +60,7 @@ export default {
     transition: ease-in-out 0.6s;
     user-select: none;
     color: #f5f5f7;
-    @media screen and (max-width: 414px) {
+    @media screen and (max-width: 576px) {
       padding: 10px;
     }
     .nav-logo-burger {
@@ -108,17 +108,19 @@ export default {
         display: flex;
         position: fixed;
         flex-flow: column nowrap;
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
         justify-content: flex-start;
-        // background-color: rgba(0, 0, 0, 0.85);
         background-color: rgb(23, 23, 23);
         transition: ease-in-out 0.6s;
         color: #f5f5f7 !important;
         .nav-logo-burger {
+          box-sizing: border-box;
           padding-bottom: 20px;
           border-bottom: solid 1px #f5f5f7;
-          box-sizing: border-box;
+          @media screen and (max-width: 576px) {
+            padding-bottom: 10px;
+          }
           .nav-logo {
             :hover {
               color: #ffffff
@@ -142,10 +144,7 @@ export default {
           flex-flow: column nowrap;
           align-items: flex-end;
           box-sizing: border-box;
-          padding: 20px 30px;
-          @media screen and (max-width: 414px) {
-            padding: 20px 15px;
-          }
+          padding: 20px 15px;
           a {
             width: 100%;
             font-size: 18px;
@@ -155,12 +154,6 @@ export default {
               color: #ffffff
             }
           }
-        }
-      }
-      @media screen and (max-width: 414px) {
-        padding: 10px;
-        .nav-logo-burger {
-          padding: 0 0 10px;
         }
       }
     }
