@@ -69,6 +69,7 @@ export default {
 .home {
   display: block;
   z-index: 10;
+  overflow: hidden; /* 用來防止aos的效果導致左右scroll bar產生 */
   #banner {
     .swiper-container,
     .swiper-container-fade,
@@ -81,28 +82,28 @@ export default {
         .swiper-slide-duplicate,
         .swiper-slide-prev {
           .slider1{
-            width: 100%;
+            // width: 100%;
             height: 100%;
             background-image: url('../assets/01.jpg');
             background-size: cover;
             background-position: center;
           }
           .slider2{
-            width: 100%;
+            // width: 100%;
             height: 100%;
             background-image: url('../assets/02.jpg');
             background-size: cover;
             background-position: center;
           }
           .slider3{
-            width: 100%;
+            // width: 100%;
             height: 100%;
             background-image: url('../assets/03.jpg');
             background-size: cover;
             background-position: center;
           }
           .slider4{
-            width: 100%;
+            // width: 100%;
             height: 100%;
             background-image: url('../assets/04.jpg');
             background-size: cover;
