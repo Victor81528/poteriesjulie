@@ -2,11 +2,13 @@
   <div class="home">
     <div id="banner">
       <swiper ref="mySwiper" :options="swiperOptions">
-        <swiper-slide><div class="slider1"></div></swiper-slide>
-        <swiper-slide><div class="slider2"></div></swiper-slide>
-        <swiper-slide><div class="slider3"></div></swiper-slide>
-        <swiper-slide><div class="slider4"></div></swiper-slide>
+        <swiper-slide><div class="slider slider1"></div></swiper-slide>
+        <swiper-slide><div class="slider slider2"></div></swiper-slide>
+        <swiper-slide><div class="slider slider3"></div></swiper-slide>
+        <swiper-slide><div class="slider slider4"></div></swiper-slide>
         <div class="swiper-pagination" slot="pagination"></div>
+        <div class="swiper-button swiper-button-prev" slot="button-prev"></div>
+        <div class="swiper-button swiper-button-next" slot="button-next"></div>
       </swiper>
     </div>
     <div id="style">
@@ -49,6 +51,10 @@ export default {
           el: '.swiper-pagination',
           dynamicBullets: true,
           clickable: true
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
         }
       }
     }
@@ -59,7 +65,6 @@ export default {
     }
   },
   mounted () {
-    // this.swiper.slideTo(0, 2000, false)
     this.$store.commit('changeColor', '#f5f5f7')
   }
 }
@@ -81,33 +86,25 @@ export default {
         .swiper-slide,
         .swiper-slide-duplicate,
         .swiper-slide-prev {
-          .slider1{
-            // width: 100%;
+          .slider {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             height: 100%;
-            background-image: url('../assets/01.jpg');
             background-size: cover;
             background-position: center;
+          }
+          .slider1{
+            background-image: url('../assets/01.jpg');
           }
           .slider2{
-            // width: 100%;
-            height: 100%;
             background-image: url('../assets/02.jpg');
-            background-size: cover;
-            background-position: center;
           }
           .slider3{
-            // width: 100%;
-            height: 100%;
             background-image: url('../assets/03.jpg');
-            background-size: cover;
-            background-position: center;
           }
           .slider4{
-            // width: 100%;
-            height: 100%;
             background-image: url('../assets/04.jpg');
-            background-size: cover;
-            background-position: center;
           }
         }
       }
@@ -116,6 +113,11 @@ export default {
           height: 12px;
           width: 12px;
           background-color: white;
+        }
+      }
+      .swiper-button {
+        color: white;
+        @media screen and (max-width: 768px) {
         }
       }
     }

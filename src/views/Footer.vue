@@ -51,6 +51,7 @@ export default {
           box-sizing: border-box;
           padding: 10px;
           border-bottom: black solid 1px;
+          font-size: 18px;
         }
         .footer-link {
           display: flex;

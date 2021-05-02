@@ -23,6 +23,7 @@ export default {
   font-family: NotoSansTC;
   src: url('/fonts/NotoSansTC-thin.otf');
   }
+  $my-white: #f5f5f7;
   #app {
     font-family: NotoSansTC;
   }
