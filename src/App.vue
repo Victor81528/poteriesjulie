@@ -21,7 +21,7 @@ export default {
 <style lang="scss">
   @font-face {
   font-family: NotoSansTC;
-  src: url('/fonts/NotoSansTC-thin.otf');
+  src: url('/fonts/NotoSansTC-Thin.otf');
   }
   $my-white: #f5f5f7;
   #app {
